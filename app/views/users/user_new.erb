@@ -1,0 +1,20 @@
+<section>
+    <form id="new-user-form" method="POST" action="/users">
+      <div>
+         <input type="text" name="user[username]" placeholder="Username"
+      </div>
+       <div>
+         <input type="text" name="user[email]" placeholder="Email"
+      </div>
+      <div>
+         <input type="text" name="user[password_digest]" placeholder="Password"
+      </div>
+
+      <div>
+        <TEXTAREA NAME="user[description]" COLS=40 ROWS=6 placeholder="Describe yourself"></TEXTAREA>
+      </div>
+      <div>
+        <input type="submit" value="Add user">
+      </div>
+    </form>
+</section>
