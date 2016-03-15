@@ -1,0 +1,7 @@
+<section class="task-card">
+  <div class="check-box"><input type="checkbox" /></div>
+  <h3><%= @task.title %></h3>
+  <h4><%= print_nice_date(@task.due_date) %> </h4>
+  <p><%= @task.write_priority %> </p>
+  <p><%= @task.notes %></p>
+</section>

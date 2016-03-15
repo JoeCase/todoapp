@@ -1,0 +1,6 @@
+
+  <h2>Hello <%= @user.username %>! Here is your todo list:</h2>
+
+  <% @user.tasks.each do |task| %>
+    <%= erb :'tasks/_task_item', locals: {task: task} %>
+  <% end %>

@@ -1,14 +1,14 @@
-User.create(username: 'joe', email: 'joe@joe.com', password: 'pw', description: Faker::Hipster.paragraph)
-
-user_amount         = 6
-list_amount         = 3
-task_amount         = 10
-tag_amount          = 10
-tags_per_task       = 4
+user_amount    = 6
+list_amount    = 3
+task_amount    = 10
+tag_amount     = 10
+tags_per_task  = 4
 
 
 
 # USERS
+User.create(username: 'joe', email: 'joe@joe.com', password: 'pw', description: Faker::Hipster.paragraph)
+
 user_amount.times do
   User.create(  username:        Faker::Internet.user_name,
                 email:           Faker::Internet.free_email,
@@ -20,10 +20,14 @@ end
 user_ids = User.all.map { |user| user.id }
 users = User.all
 
+
+# TAGS
 tag_amount.times do
   Tag.create(title: Faker::Commerce.color)
 end
 
+
+# TASKS
 users.each do |user|
   list_amount.times do
 
@@ -45,9 +49,6 @@ users.each do |user|
                          task_id: task.id)
       end
       end
-
-
-
   end
 end
 

@@ -7,4 +7,16 @@ class Task < ActiveRecord::Base
 
   validates :title, presence: true
   validates :status, presence: true
+
+  def write_priority
+    case self.priority
+    when 1,0
+      'low'
+    when 2
+      'medium'
+    when 3
+      'high'
+    end
+  end
+
 end
