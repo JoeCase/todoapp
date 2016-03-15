@@ -1,0 +1,11 @@
+.check-box {
+  float: left;
+  clear: right;
+  height: 100%;
+}
+
+.task-card {
+  width: 500px;
+  margin: auto;
+  text-align: left;
+}
