@@ -1,8 +1,10 @@
 user_amount    = 1
-list_amount    = 3
-task_amount    = 4
+list_amount    = 2
+task_amount    = 2
 tag_amount     = 10
-tags_per_task  = 4
+tags_per_task  = 3
+
+lists = ['Home', 'Office', 'Errands']
 
 
 
@@ -12,8 +14,8 @@ User.create(username: 'joe', email: 'joe@joe.com', password: 'pw', description: 
 user_amount.times do
   User.create(  username:        Faker::Internet.user_name,
                 email:           Faker::Internet.free_email,
-                password: 'pw',
-                description:      Faker::StarWars.quote
+                password:        'pw',
+                description:     Faker::StarWars.quote
                 )
 end
 
@@ -29,9 +31,9 @@ end
 
 # TASKS
 users.each do |user|
-  list_amount.times do
+  lists.each do |list_name|
 
-    list = List.create(title: Faker::Lorem.word, user_id: user.id)
+    list = List.create(title: list_name, user_id: user.id)
 
     task_amount.times do
        task = Task.create(list_id:     list.id,
