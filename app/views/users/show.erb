@@ -12,13 +12,13 @@
 
 
 
-
-<div class="item-list">
+ <div class="item-list">
  <h2>Hello <%= @user.username %>! Here is your todo list:</h2>
-
+ <div class="new-task-form-container"><%= erb :'tasks/new' %></div>
+ <ul id="task-list-ul">
   <% @tasks.each do |task| %>
     <%= erb :'tasks/_task_item', locals: {task: task} %>
   <% end %>
-
+</ul>
 </div>
 

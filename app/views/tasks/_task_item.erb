@@ -1,6 +1,11 @@
-<section>
-  <div>
-    <h4><input type="checkbox"/> <a href="/tasks/<%= task.id %>"><%= task.title %></a><span class="due-date"><%= print_nice_date(task.due_date) %> </span></h4>
+<li>
+  <div class="task-list-item">
+    <input type="checkbox"/> <a class="list-item-link" href="/tasks/<%= task.id %>"><%= task.title %></a><span class="due-date">Due:  <%= print_nice_date(task.due_date) %> </span>
+    <div class="task-details">
+      <p>Priority:  <%= task.write_priority %></p>
+      <p>Tags:  <%= task.tags_as_string %></p>
+      <p>Notes:  <%= task.notes %></p>
 
+    </div>
   </div>
-</section>
+</li>

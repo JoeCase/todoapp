@@ -1,7 +1,20 @@
-.check-box {
+.task-list-item {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding:10px;
+  margin-bottom: 10px;
+}
+
+.list-item-link {
+
+}
+
+
+input [type='checkbox'] {
   float: left;
   clear: right;
-  height: 100%;
+  margin-right: 15px;
+
 }
 
 .task-card {
@@ -12,7 +25,7 @@
 
 .due-date {
   float: right;
-  font: size .7rem;
+  font-size: .7rem;
   color: #9E9E9E;
 }
 
@@ -29,6 +42,9 @@
   margin: 50px auto;
 }
 
+.item-list ul {
+  list-style: none;
+}
 
 /*Vertical menu*/
 
@@ -54,7 +70,7 @@
     color: white;
 }
 
-.new-task-button {
+button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
@@ -65,11 +81,24 @@
     font-size: 1rem;
 }
 
-.new-task-button {
+button {
   transition-duration: 0.4s;
 }
 
-.new-task-button:hover {
+button:hover {
     background-color: #9E9E9E;
     color: white;
 }
+
+.task-details {
+  display: none;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: .9rem;
+  color: #616161;
+}
+
+.new-task-form-container {
+  display: none;
+}
+

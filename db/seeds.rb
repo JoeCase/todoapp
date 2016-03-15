@@ -1,6 +1,6 @@
-user_amount    = 6
+user_amount    = 1
 list_amount    = 3
-task_amount    = 10
+task_amount    = 4
 tag_amount     = 10
 tags_per_task  = 4
 
@@ -13,7 +13,7 @@ user_amount.times do
   User.create(  username:        Faker::Internet.user_name,
                 email:           Faker::Internet.free_email,
                 password: 'pw',
-                description:     Faker::Hipster.paragraph
+                description:      Faker::StarWars.quote
                 )
 end
 
@@ -40,7 +40,7 @@ users.each do |user|
                           status:      0,
                           priority:    rand(1..3),
                           due_date:    Faker::Date.forward(100),
-                          notes: Faker::StarWars.quote)
+                          notes:       Faker::Lorem.paragraph(3))
 
        tag_ids = Tag.all.map { |tag| tag.id }
 
