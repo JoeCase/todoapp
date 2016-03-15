@@ -1,5 +1,9 @@
   <div class="category-menu">
     <ul>
+      <form method="get" action="/tasks/new">
+        <button class="new-task-button">Add new Task!</button>
+      </form>
+      <li> <a href="/users/<%= session[:user_id] %>">All Tasks </a></li>
       <% @user.lists.each do |list| %>
       <li> <a href="/lists/<%= list.id %>"><%= list.title %></a></li>
       <% end %>

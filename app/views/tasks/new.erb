@@ -1,0 +1,26 @@
+<form class="new-task-form" method="post" action="/tasks">
+   <input type="hidden" name="task[user_id]" value="<%= session[:user_id]%>">
+   <input type="hidden" name="task[status]" value="0">
+   <div>
+    <label for="task-title">Task Title:</label>
+    <input id="task-title" type="text" name="task[title]" placeholder="Title">
+   </div>
+   <div>
+    <label for="task-due_date">Due Date:</label>
+    <input id="datepicker" type="text" name="task[due_date]" placeholder="Due Date">
+   </div>
+   <div>
+    <label for="list">List:</label>
+    <select id="list" name="task[list_id]">
+      <% current_user.lists.each do |list| %>
+        <option value="<%= list.id %>"><%= list.title %></option>
+      <% end %>
+    </select>
+   </div>
+
+   <div>
+    <label for="task-notes">Task Notes:</label>
+    <textarea id="task=notes" name="task[notes]" COLS=40 ROWS=6 placeholder="Notes"></TEXTAREA>
+   </div>
+   <input class="new-task-button" type="submit" value="Create Task">
+</form>
