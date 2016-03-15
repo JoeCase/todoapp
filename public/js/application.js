@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('.list-item-link').on('click', function(event) {
+  $('.item-list').on('click','.list-item-link', function(event) {
       event.preventDefault();
       $(this).siblings('.task-details').slideToggle(200);
    }) // End of list-item-link event
@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   $('.new-task-button').on('click', function(event) {
       event.preventDefault();
-       $('.new-task-form-container').slideDown();
+       $('.new-task-form-container').slideToggle(200);
    }) // End of new-task-button click event show
 
 
