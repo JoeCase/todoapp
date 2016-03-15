@@ -238,7 +238,7 @@ form label>span {
     margin-top: 10px;
     color: #888;
 }
-form input[type="text"], form input[type="email"], form textarea, form select {
+form input[type="text"], form input[type="email"], form input[type="password"], form textarea, form select {
     border: 1px solid #DADADA;
     color: #888;
     height: 30px;

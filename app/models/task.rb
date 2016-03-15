@@ -19,4 +19,10 @@ class Task < ActiveRecord::Base
     end
   end
 
+  def tags_as_string
+    self.tags.map { |tag_object|  tag_object.title}.join(", ")
+  end
+
+
+
 end

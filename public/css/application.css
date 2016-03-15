@@ -1,7 +1,20 @@
-.check-box {
+.task-list-item {
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding:10px;
+  margin-bottom: 10px;
+}
+
+.list-item-link {
+
+}
+
+
+input [type='checkbox'] {
   float: left;
   clear: right;
-  height: 100%;
+  margin-right: 15px;
+
 }
 
 .task-card {
@@ -12,20 +25,81 @@
 
 .due-date {
   float: right;
-  font: size .7rem;
+  font-size: .7rem;
   color: #9E9E9E;
 }
 
-.category-menu {
+/*.category-menu {
   float: left;
   clear: right;
   margin-top: 50px;
   font-size: 1.6rem;
 
-}
+}*/
 
 .item-list {
   width: 900px;
   margin: 50px auto;
 }
 
+.item-list ul {
+  list-style: none;
+}
+
+/*Vertical menu*/
+
+.category-menu ul {
+    list-style-type: none;
+    margin: 80px 0px 0px 0px;
+    padding: 0;
+    width:150px;
+    background-color: #f1f1f1;
+    float: left;
+}
+
+.category-menu li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.category-menu li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+.task-details {
+  display: none;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: .9rem;
+  color: #616161;
+}
+
+.new-task-form-container {
+  display: none;
+}
+
+.
