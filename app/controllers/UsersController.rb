@@ -16,6 +16,7 @@ end
 
 get '/users/:user_id' do
   @user = User.find(params[:user_id])
+  @tasks = @user.tasks
   erb :'users/show'
 end
 

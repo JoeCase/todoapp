@@ -52,7 +52,7 @@ main {
 a:link,
 a:visited,
 header nav input[type="submit"] {
-  color: #fff;           /* darker contrasting color; inactive links */
+  color: #303030;           /* darker contrasting color; inactive links */
   text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ a:hover,
 a:active,
 header nav input[type="submit"]:hover,
 header nav input[type="submit"]:active {
-  color: #E0F2F1;          /* brighter contrasting color; active links */
+  color: #009688;          /* brighter contrasting color; active links */
 }
 
 
