@@ -21,12 +21,18 @@ $(document).ready(function() {
                             };
 
           $.ajax(formParams).done(function(response) {
-              $('#task-list-ul').prepend(response);
-              $( ".new-task-form-container" ).slideUp( "slow", function() {
+              // $('#task-list-ul').prepend(response);
+              $( ".new-task-form-container" ).slideUp( 200, function() {
                   $('.new-task-form').trigger("reset");
                });
+              $(response).hide().prependTo("#task-list-ul").fadeIn(1000);
+
           });
   }); // End of new-task-form ajax send and cimmut
+
+  $('checkbox').on('click', function(){
+
+  })
 
 
   $(function() {
