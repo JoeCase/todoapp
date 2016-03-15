@@ -1,7 +1,6 @@
 <section>
-  <div class="check-box"><input type="checkbox" /></div>
   <div>
-    <a href="/tasks/<%= task.id %>"><h3><%= task.title %></h3></a>
-    <h4><%= print_nice_date(task.due_date) %> </h4>
+    <h4><input type="checkbox"/> <a href="/tasks/<%= task.id %>"><%= task.title %></a><span class="due-date"><%= print_nice_date(task.due_date) %> </span></h4>
+
   </div>
 </section>

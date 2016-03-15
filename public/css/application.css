@@ -9,3 +9,23 @@
   margin: auto;
   text-align: left;
 }
+
+.due-date {
+  float: right;
+  font: size .7rem;
+  color: #9E9E9E;
+}
+
+.category-menu {
+  float: left;
+  clear: right;
+  margin-top: 50px;
+  font-size: 1.6rem;
+
+}
+
+.item-list {
+  width: 900px;
+  margin: 50px auto;
+}
+
