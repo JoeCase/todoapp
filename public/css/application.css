@@ -102,4 +102,6 @@ button:hover {
   display: none;
 }
 
-.
+.greyBackground{
+    background-color: #BDBDBD;
+}

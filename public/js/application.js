@@ -30,9 +30,14 @@ $(document).ready(function() {
           });
   }); // End of new-task-form ajax send and cimmut
 
-  $('checkbox').on('click', function(){
-
-  })
+$("input[type='checkbox']").change(function(){
+    if($(this).is(":checked")){
+        $(this).parent().addClass("greyBackground");
+        $(this).parent().hide().appendTo("#task-list-ul").fadeIn(700);
+    }else{
+        $(this).parent().removeClass("greyBackground");
+    }
+});
 
 
   $(function() {
